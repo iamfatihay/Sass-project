@@ -1,0 +1,27 @@
+.nav{
+    // border: 1px solid red;
+    height: 10vh;
+    padding: 1rem;
+    &__list{
+        // bu isaret icinde bulundugu  yerin ismini alir = ".nav"
+        text-align: right;
+    }
+    &__item{
+        display: inline;
+        padding: 1rem;
+    }
+    &__link{
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-family: $font-family;
+        @include transition(0.7s);
+        //! mixin i include ile cagiriyoruz, icine parametresini veriyoruz
+        &:hover{
+            color: blue;
+        }
+        &--active{
+            color: $secondary-color;
+        }
+    }
+}
